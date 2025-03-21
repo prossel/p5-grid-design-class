@@ -8,7 +8,7 @@ class Grid {
     
     constructor(config = {}) {
         
-        this.VERSION = "0.1.0";
+        this.VERSION = "0.2.0";
 
         const defaultConfig = {
             x: 0,
