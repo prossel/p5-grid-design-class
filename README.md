@@ -8,6 +8,12 @@ This project is part of the Creative Coding series and focuses on implementing a
 - Access and modify grid cells
 - Support for various grid properties (margin, gutter, flow lines)
 
+## Live Demo
+
+Check out the live demo of the Grid class in action and experiment with different grid configurations:
+
+<https://prossel.github.io/p5-grid-design-class/src/>
+
 ## Installation
 
 To use the Grid class in your project, simply clone this repository and include the `Grid.js` file in your project.
