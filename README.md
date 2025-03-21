@@ -24,6 +24,8 @@ Or you can link the Grid class directly from the GitHub repository:
 
 ## Usage
 
+### Example 1
+
 Here is a basic example of how to use the Grid class:
 
 ```javascript
@@ -47,7 +49,7 @@ function draw() {
 ![Grid1 Example](doc/imgs/grid1.png)
 Example 1: Default grid with 6 columns and 6 rows
 
-## Example 2
+### Example 2
 
 Parmeters can be passed to the Grid constructor to customize the grid:
 
@@ -62,9 +64,10 @@ Parmeters can be passed to the Grid constructor to customize the grid:
 ```
 
 ![Grid2 Example](doc/imgs/grid2.png)
+
 Custom number of columns and rows with margin and gutter
 
-## Example 3
+### Example 3
 
 Customize colors and add flow lines
 
@@ -83,6 +86,7 @@ Customize colors and add flow lines
 ```
 
 ![Grid3 Example](doc/imgs/grid3.png)
+
 Customize colors and add flow lines
 
 See more examples in [sketch.js](src/sketch.js) file.
