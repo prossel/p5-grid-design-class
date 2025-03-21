@@ -47,7 +47,8 @@ function draw() {
 ```
 
 ![Grid1 Example](doc/imgs/grid1.png)
-Example 1: Default grid with 6 columns and 6 rows
+
+Grid 1: Default grid with 6 columns and 6 rows
 
 ### Example 2
 
@@ -65,7 +66,7 @@ Parmeters can be passed to the Grid constructor to customize the grid:
 
 ![Grid2 Example](doc/imgs/grid2.png)
 
-Custom number of columns and rows with margin and gutter
+Grid 2: Custom number of columns and rows with margin and gutter
 
 ### Example 3
 
@@ -87,7 +88,7 @@ Customize colors and add flow lines
 
 ![Grid3 Example](doc/imgs/grid3.png)
 
-Customize colors and add flow lines
+Grid 3: Customize colors and add flow lines
 
 See more examples in [sketch.js](src/sketch.js) file.
 
