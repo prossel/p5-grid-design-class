@@ -53,14 +53,29 @@ function setup() {
 function draw() {
   background(220);
 
-  ellipse(width / 2, height / 2, width, height);
+  // ellipse(width / 2, height / 2, width, height);
 
   // draw the grid
-  grids[iGrid].draw();
- 
+  var grid = grids[iGrid];
+  grid.draw();
+
+  // draw an ellipse in top left 4 modules
+  var rect = grid.getRectangle(0, 0, 2, 2);
+  var center = rect.getCenter();
+  noStroke();
+  fill(255, 0, 0, 50);
+  ellipse(center.x, center.y, rect.w, rect.h);
+
+  // draw an ellipse in bottom right 4 modules
+  var rect = grid.getRectangle(grid.columns - 2, grid.rows - 2, 2, 2);
+  var center = rect.getCenter();
+  ellipse(center.x, center.y, rect.w, rect.h);
+
+  // draw the grid number and instructions
+  fill(0)
   text("Grid " + (iGrid + 1), 10, 20);
   text("Mousewheel to change grid", 10, height - 10);
-  
+
 }
 
 // mouswheel event

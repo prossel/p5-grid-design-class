@@ -4,10 +4,27 @@
 // https://github.com/prossel/p5-grid-design-class
 // Inspired by https://visme.co/blog/layout-design/
 
+class Rectangle {
+    constructor(x, y, w, h) {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+    }
+
+    draw() {
+        rect(this.x, this.y, this.w, this.h);
+    }
+
+    getCenter() {
+        return createVector(this.x + this.w / 2, this.y + this.h / 2);
+    }
+}
+
 class Grid {
-    
+
     constructor(config = {}) {
-        
+
         this.VERSION = "0.2.0";
 
         const defaultConfig = {
@@ -108,5 +125,28 @@ class Grid {
         }
 
         pop();
+    }
+
+    // calculate the width of a column
+    colWidth() {
+        // remove the margins
+        var w = this.w - 2 * this.margin;
+        return (w - this.gutter * (this.columns - 1)) / this.columns;
+    }
+
+    // calculate the height of a row
+    rowHeight() {
+        var h = this.h - 2 * this.margin;
+        return (h - this.gutter * (this.rows - 1)) / this.rows;
+    }
+
+    getRectangle(iCol, iRow, nCols = 1, nRows = 1) {
+        var colWidth = this.colWidth();
+        var rowHeight = this.rowHeight();
+        var x = this.x + this.margin + iCol * (colWidth + this.gutter);
+        var y = this.y + this.margin + iRow * (rowHeight + this.gutter);
+        var w = nCols * colWidth + (nCols - 1) * this.gutter;
+        var h = nRows * rowHeight + (nRows - 1) * this.gutter;
+        return new Rectangle(x, y, w, h);
     }
 }
